@@ -62,6 +62,7 @@ body{
     font-weight: 400;
     font-size: 14px;
     color: #ffffff;
+    position: relative;
 }
 
 .bar-links{
@@ -70,6 +71,24 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.nav-links li a.dropdown-menu:is(:hover, :focus) .dropdown{
+    display: flex;
+    flex-direction: column;
+    background-color: #ff6b6b;
+    position: absolute;
+    border-radius: 3px;
+}
+
+.dropdown li:hover{
+    color: black;
+}
+
+.dropdown{
+    display: none;
+    list-style: none;
+    padding: 10px;
 }
 
 /** Main **/
