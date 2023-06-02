@@ -322,3 +322,7 @@ a.link-none{
    border-radius: 150px;
 }
 
+.border-100{
+    border-radius: 100%;
+}
+
