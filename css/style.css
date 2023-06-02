@@ -82,7 +82,7 @@ main{
 }
 
 .title{
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 500;
 }
 
@@ -154,6 +154,17 @@ a.link-none{
     animation-delay: 12s;
 }
 
+.terminal{
+    background-color: black;
+    color: #ffffff;
+    font-size: 20px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+    margin: 20px;
+}
+
 /** Utils */
 .d-flex-row{
     display: flex;
@@ -223,6 +234,10 @@ a.link-none{
     text-align: start;
 }
 
+.text-justify{
+    text-align: justify;
+}
+
 .grow-1{
     flex-grow: 1;
 }
@@ -238,6 +253,14 @@ a.link-none{
 
 .wrap{
     flex-wrap: wrap;
+}
+
+.text-red{
+    color: #ff6b6b;
+}
+
+.font-30{
+    font-size: 25px;
 }
 
 /** Medias Queries*/
