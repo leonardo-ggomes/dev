@@ -330,3 +330,39 @@ a.link-none{
     border-radius: 100%;
 }
 
+.card{
+    margin: 3px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 350px;   
+    padding: 10px;
+    min-height: 200px;
+    background-color: #00afff94;
+    border-radius: 2px;
+    position: relative;
+}
+
+a.card-link{
+    text-decoration: none;
+    border-radius: 2px;
+    color: white;
+    padding: 10px;
+    justify-content: center;
+    background-color: #00afff;
+    display: flex;
+    width: 100%;   
+    cursor: pointer; 
+}
+
+.card-image{
+    width: 50px;
+}
+
+.card-header{
+    background-color: #1c709657;
+    border-radius: 3px;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+}
