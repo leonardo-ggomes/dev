@@ -105,7 +105,11 @@ a.link-none{
 }
 
 .text-blue{
-    color:#00afff;
+    color:#00afff!important;
+}
+
+.mt-10{
+    margin-top: 10px;
 }
 
 .grid-container{
