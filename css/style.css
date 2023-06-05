@@ -104,6 +104,14 @@ a.link-none{
     color: #d8cfcf;
 }
 
+.bg-white{
+    background-color: #ffffff;
+}
+
+.bg-dark{
+    background-color: #000000!important;
+}
+
 .text-blue{
     color:#00afff!important;
 }
@@ -229,6 +237,10 @@ a.link-none{
     height: calc(100vh - 45.2px);
 }
 
+.h-50{
+    height: 50%;
+}
+
 .h-70{
     height: 70%;
 }
@@ -286,6 +298,14 @@ a.link-none{
     font-size: 25px;
 }
 
+.font-16{
+    font-size: 16px;
+}
+
+.font-14{
+    font-size: 14px;
+}
+
 /** Medias Queries*/
 @media screen and (max-width: 650px) {
     .nav-links{
@@ -336,9 +356,8 @@ a.link-none{
     flex-direction: column;
     flex-grow: 1;
     width: 350px;   
-    padding: 10px;
     min-height: 200px;
-    background-color: #00afff94;
+    background-color: #00afff33;
     border-radius: 2px;
     position: relative;
 }
@@ -349,7 +368,7 @@ a.card-link{
     color: white;
     padding: 10px;
     justify-content: center;
-    background-color: #00afff;
+    background-color: #000000;
     display: flex;
     width: 100%;   
     cursor: pointer; 
@@ -360,9 +379,15 @@ a.card-link{
 }
 
 .card-header{
-    background-color: #1c709657;
+    /* background-color: #1c709657; */
+    background: url(../public/images/background-code.png) #1c709657;
     border-radius: 3px;
+    min-height: 100px;
     height: 50%;
     display: flex;
     justify-content: center;
+}
+
+.card-body{
+    padding: 10px;
 }
