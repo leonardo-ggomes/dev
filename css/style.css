@@ -116,6 +116,18 @@ a.link-none{
     background-color: #000000!important;
 }
 
+.text-mark{
+    color: blue;
+}
+
+.text-comment{
+    color:greenyellow;
+}
+
+.text-info{
+    color: rgb(175 158 35);
+}
+
 .text-blue{
     color:#748699!important;
 }
