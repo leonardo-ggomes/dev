@@ -388,7 +388,6 @@ a.link-none{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    min-width: 304px;
     min-height: 200px;
     background-color: #ffffff;
     border-radius: 2px;
@@ -423,4 +422,11 @@ a.card-link{
 
 .card-body{
     padding: 10px;
+}
+
+.grid{
+    width: 97vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 304px);
+    justify-content: center;
 }
