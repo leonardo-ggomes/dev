@@ -40,6 +40,13 @@ body{
     background: -webkit-linear-gradient(90deg, hsla(208, 33%, 21%, 1) 0%, rgb(0 174 255) 100%);
 }
 
+.grif{
+    font-weight: bold;
+    padding: 2px;
+    background-color: #f2f1f14d;
+    border-radius: 2px;
+}
+
 
 /** Header **/
 
@@ -430,3 +437,5 @@ a.card-link{
     grid-template-columns: repeat(auto-fill, 304px);
     justify-content: center;
 }
+
+
