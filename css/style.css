@@ -292,6 +292,10 @@ a.link-none{
     width: 100%;
 }
 
+.w-75{
+    width: 75%;
+}
+
 .p-10{
     padding: 10px;
 }
@@ -339,6 +343,10 @@ a.link-none{
 
 .font-16{
     font-size: 16px;
+}
+
+.font-35{
+    font-size: 30px;
 }
 
 .font-14{
