@@ -104,22 +104,26 @@
             <div class="w-100 vh-100 bg-capa d-flex-row justify-between align-center items"> 
                 <div class="h-100 p-10">
                     <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/images/student.png" class="h-50" alt="desenvolvimento">
+                        <img src="../public/images/coding.png" class="h-50" alt="desenvolvimento">
                     </figure>                    
                 </div>
                 <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center">
-                    <h1>Material de Aula</h1>
+                    <h1>Test-drive</h1>
                     <p class="font-30 text-justify">
-                        &nbsp; Clique <code>script.js </code> implemente a lógica que será executada
-                        nas páginas do projeto.  <br><br>    
-                        
-                        &nbsp;Nós podemos acessar os elementos html atráves do javascript. Uma maneira fácil é atráves
-                        da API DOM. Geralmente fazemos isso pelo <code>id, class ou name</code>. <br><br>
+                        &nbsp; Crie no VS Code um arquivo <code>hello.js </code>e implemente o código abaixo.    
+                        Para executá-lo, basta rodar o comando <code>node hello.js</code>. <br><br>
                     </p>      
                     
+                    <div class="terminal">
+                        <p>                            
+                            <code>
+                                 console.log("Hello World")
+                            </code>
+                        </p>
+                    </div>      
                   
                     <div class="mt-10">
-                        <a href="https://www.w3schools.com/js/js_htmldom.asp" target="_blank" class="a-custom">Mais sobre DOM <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://nodejs.org/docs/latest-v19.x/api/synopsis.html" target="_blank" class="a-custom">Documentação Node.js <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                   
                 </div>
@@ -132,122 +136,57 @@
                     </figure>                    
                 </div>
                 <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center">
-                    <h1>Exemplo</h1>
+                    <h1>Criando o primeiro servidor...</h1>
                                        
                     <div class="terminal">
                         <p> 
-                            <code> &lt;input <span class="text-info">id="<span class="text-mark">identificador</span>"</span> type="text"&gt; </code> <br><br>
                             <code>
-                                 &lt;script&gt;  <br>
-                                     &nbsp; var ipt =  <span class="text-info">document.getElementById("<span class="text-mark">identificador</span>")</span>  <br>
-                                 &lt;/script&gt; 
-                            </code>
+                                const http = require('node:http'); <br>
+
+                                const hostname = '127.0.0.1';<br>
+                                const port = 3000;<br><br>
+
+                                const server = http.createServer((req, res) => {<br>
+                                    &nbsp;res.statusCode = 200;<br>
+                                    &nbsp;res.setHeader('Content-Type', 'text/plain');<br>
+                                    &nbsp;res.end('Hello, World!\n');<br>
+                                });<br><br>
+
+                                server.listen(port, hostname, () => {<br>
+                                &nbsp;console.log(`Server running at http://${hostname}:${port}/`);<br>
+                                }); 
+                            </code>                            
                         </p>
-                    </div>
-
-                    <p class="font-30 text-justify">
-                       Como o <code>document.getElementById()</code> retorna um valor, precisamos armazenar em uma variável. <br><br>
-                    </p>
-                  
-                  
-                    <div class="mt-10">
-                        <a href="https://www.w3schools.com/js/" target="_blank" class="a-custom">Extra <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
+                    </div>      
                   
                 </div>
-            </div>  
-
-            <div class="w-100 vh-100 bg-capa d-flex-row justify-between align-center items"> 
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/images/student.png" class="h-50" alt="desenvolvimento">
-                    </figure>                    
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center">
-                    <h1>Window Location</h1>
-                    <p class="font-30 text-justify">
-                        &nbsp; URL é o endereço web que nos leva a um determinado recurso ou site, exemplo <code>www.meusite.com/index.html</code>.  <br>                       
+            </div>      
             
-                        &nbsp;Nós podemos realizar essa navegação pelo javascript, ou seja, ir de uma página a outra. Use o comando <code>window.location</code>. <br><br>
-                    </p>      
-                    
-                    <div class="terminal">
-                        <p>                            
-                            <code>
-                                 &lt;script&gt;  <br>
-                                     &nbsp; <span class="text-info">window.location</span>  = "fale_conosco.html" <br>
-                                 &lt;/script&gt; 
-                            </code>
-                        </p>
-                    </div>                  
-                </div>
-            </div>  
-
-            <div class="w-100 vh-100 bg-capa d-flex-row-reverse justify-between align-center items"> 
+            
+            <div class="w-100 vh-100 d-flex-row bg-capa justify-between align-center items"> 
                 <div class="h-100 p-10">
                     <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/images/student.png" class="h-50" alt="desenvolvimento">
+                        <img src="../public/images/computer_io.png" class="h-50" alt="desenvolvimento">
                     </figure>                    
                 </div>
                 <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center">
-                    <h1>Window Location</h1>
-
+                    <h1>Na prática</h1>
                     <p class="font-30 text-justify">
-                        &nbsp; Podemos ainda passar valores para a página requisitada. Veja, <code class="text-white">fale_conosco.html<span class="text-info">?valor</span></code>
-                      <Strong class="text-info">?</Strong> indica que você vai passar valores na url. <br><br>
-                    </p>
-
-                    <div class="terminal">
-                        <p>                            
-                            <code>
-                                 &lt;script&gt;  <br>
-                                     &nbsp; <span>window.location</span>  = "fale_conosco.html<span class="text-info">?1</span>" <br>
-                                 &lt;/script&gt; 
-                            </code>
-                        </p>
-                    </div>
-
-                 
-                    <div class="mt-10">
-                        <a href="https://www.w3schools.com/js/js_window_location.asp" target="_blank" class="a-custom">Extra <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                  
-                </div>
-            </div>  
-
-            <div class="w-100 vh-100 d-flex-row-reverse justify-between align-center items"> 
-                <div class="h-100 p-10">
-                    <figure class="h-100 d-flex-row justify-center align-center">
-                        <img src="../public/images/laptop.png" class="h-50" alt="desenvolvimento">
-                    </figure>                    
-                </div>
-                <div class="grow-1 h-100 p-10 d-flex-column justify-center align-center">
-                    <h1>Location Search</h1>
-                    <p class="font-30 text-justify">
-                       Anteriormente passamos o valor na url <code>www.meusite.com/fale_conosco.html?1</code>.  <br>     
-                       Agora vamos pegar esse valor e realizar a nossa lógica. Vale ressaltar que esse bloco de código
-                       deve ser colocado no header da estrutura html, na página do recurso de destino.<br><br>
+                        &nbsp; Acesse o repositório para ter acesso ao código fonte da aula. <br>     
                     </p>      
                     
                     <div class="terminal">
-                        <p>                            
-                            <code>
-                                 &lt;script&gt;  <br>
-                                     &nbsp; var url = <span class="text-info">location.search</span> <br> <br>
-                                     &nbsp;<span class="text-comment">//Comentário ?1 <br></span>
-                                     &nbsp;var url_val = url.replace('?','') <br>
-                                 &lt;/script&gt; 
-                            </code>
-                        </p>
+                        <span><i class="fa-solid fa-lock"></i> https://github.com/leonardo-ggomes/reserva</span> 
                     </div>
 
-                 
                     <div class="mt-10">
-                        <a href="https://www.w3schools.com/jsref/prop_loc_search.asp" target="_blank" class="a-custom">Extra <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://github.com/leonardo-ggomes/reserva" target="_blank">
+                            <img  src="../public/images/world-wide-web.png" class="icon" alt="icon" srcset="">
+                        </a>                       
                     </div>
                   
                 </div>
-            </div>  
+            </div>      
         </main>
         <footer>
 
