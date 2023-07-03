@@ -131,7 +131,7 @@ a.link-none{
 }
 
 .text-mark{
-    color: blue;
+    color: #47b9ef;
 }
 
 .text-comment{
@@ -139,7 +139,7 @@ a.link-none{
 }
 
 .text-info{
-    color: rgb(175 158 35);
+    color: #d4d325;
 }
 
 .text-blue{
@@ -149,6 +149,10 @@ a.link-none{
 
 .text-primary{
     color: #3e8bba;
+}
+
+.text-code{
+   color: #43ff00;
 }
 
 .mt-10{
