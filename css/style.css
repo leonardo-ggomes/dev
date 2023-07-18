@@ -238,10 +238,23 @@ a.link-none{
     color: #ffffff;
     font-size: 20px;
     width: 100%;
-    padding: 10px;
+    padding: 40px 10px 10px 10px;
     border-radius: 5px;
     font-family: monospace;
     margin: 20px;
+    position: relative;
+}
+
+.terminal::before{
+    content: '🔴🟠◯';
+    border-radius: 5px 5px 0 0;
+    background-color: #333333;
+    display: block;
+    padding: 2px;    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 5px);
 }
 
 /** Utils */
