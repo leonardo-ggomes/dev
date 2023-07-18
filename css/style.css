@@ -247,7 +247,7 @@ a.link-none{
 }
 
 .terminal::before{
-    content: '🔴🟠◯';
+    content: '🔴🟠⚪️';
     border-radius: 5px 5px 0 0;
     background-color: #333333;
     display: block;
