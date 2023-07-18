@@ -100,6 +100,7 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    background-color: #ffffff;
 }
 
 .title{
@@ -124,6 +125,10 @@ a.link-none{
 
 .bg-white{
     background-color: #ffffff;
+}
+
+.bg-gray{
+    background-color: #eeeeee;
 }
 
 .bg-dark{
@@ -406,24 +411,24 @@ a.link-none{
 }
 
 .card{
-    box-shadow: 0px 1px 8px 2px #c3c6c4; 
     margin: 3px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    min-height: 200px;
     background-color: #ffffff;
-    border-radius: 3px;
+    border-radius: 5px;
     position: relative;
+    padding: 10px;
+    width: 243px;
 }
 
 a.card-link{
     text-decoration: none;
     border-radius: 3px;
     color: white;
-    padding: 10px;
+    padding: 5px;
     justify-content: center;
-    background-color: #000000;
+    background-color: #00aeff;
     display: flex;
     width: 100%;   
     cursor: pointer; 
@@ -434,22 +439,59 @@ a.card-link{
 }
 
 .card-header{
-    /* background-color: #1c709657; */
-    background: url(../public/images/background-code.png) #1c709657;
-    border-radius: 3px 3px 0 0;
-    min-height: 100px;
-    height: 50%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card-header div:first-child{
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.card-header .icon{
+    background-color: #eeeeee;
+    border-radius: 9px;    
+    font-size: 25px;
+    justify-content: center;   
+    padding: 17px;
+}
+
+.card-header .card-title{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.card-header .card-subtitle{
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.card-header .card-tag{
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #fffbec;
+    color: #feda67;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .card-body{
     padding: 10px;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.card .card-info{
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 300;
 }
 
 .grid{
     width: 97vw;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 304px);
+    grid-template-columns: repeat(auto-fill, 253px);
     justify-content: center;
 }
