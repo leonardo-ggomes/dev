@@ -495,3 +495,7 @@ a.card-link{
     grid-template-columns: repeat(auto-fill, 253px);
     justify-content: center;
 }
+
+.card-section{
+    margin-left: 90px;
+}
