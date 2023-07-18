@@ -38,6 +38,7 @@ body{
     background: linear-gradient(90deg, hsla(208, 33%, 21%, 1) 0%, rgb(0 174 255) 100%);
     background: -moz-linear-gradient(90deg, hsla(208, 33%, 21%, 1) 0%, rgb(0 174 255) 100%);
     background: -webkit-linear-gradient(90deg, hsla(208, 33%, 21%, 1) 0%, rgb(0 174 255) 100%);
+    border-radius: 40px 0 40px 0;
 }
 
 .grif{
