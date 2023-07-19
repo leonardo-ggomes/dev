@@ -391,13 +391,16 @@ a.link-none{
     }
 
     .items{
-        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
     }
 
     .title{
         font-size: 30px;
+    }
+
+    div figure img{
+        display: none;
     }
 }
 
