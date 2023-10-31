@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Scrum</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <style>
+        #sala div{
+            width: calc(100% / 2);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+
+        .lugar{          
+            height: 120px;
+            margin: 5px;
+            background-size: contain;           
+        }
+
+        .lugar-texto{         
+            color: white;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        .button-sorteador{
+            width: 100px;
+            font-size: 14px;
+            color: #00aeff;
+            background-color: transparent;
+            margin-bottom: 4px;
+            border-radius: 5px;
+            border: 1px solid #00aeff;
+            padding: 10px;
+            cursor: pointer;
+        }
+  
+        .numero-sorteador{
+            color: #00aeff;
+            font-size: 37px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="navbar">
+          <div>
+            <a href="../index.html" class="link-none text-blue">Coders</a>
+          </div>
+          <div class="bar-links">
+            <div>
+                <ul class="nav-links">
+                    <li>
+                        <a href="../index.html"><i class="fa-solid fa-house"></i> Início</a>
+                    </li>
+                    <li>
+                        <a href="projetos.html" class="dropdown-menu"><i class="fa-solid fa-list-check"></i> Projetos</a>
+                    </li>
+                    <li>
+                        <a href="team_scrum.html"><i class="fa-solid fa-code"></i> Team Scrum</a>
+                    </li>
+                 </ul>
+            </div>
+            <div>
+                <a href="trilhas.html" class="link-none">
+                    <i class="fa-solid fa-chalkboard-user"></i> Trilhas
+                </a>               
+            </div>
+            
+          </div>
+        </header>
+
+        <main>
+            <div class="d-flex-row vh-100 justify-around align-center wrap">
+                <section>
+                    <article class="d-flex-column justify-center p-10">
+                        <div class="title">
+                            <span>Sorteador</span> <br>#Dev!
+                        </div>
+                        <div class="subtitle">
+                            Randômico
+                        </div>
+                    </article>
+                </section>
+                <section>
+                    <div class="d-flex-row justify-between">
+                        <button onclick="alterNumero('-')" class="button-sorteador">-</button>
+                        <span id="numero-sorteador" class="numero-sorteador">34</span>
+                        <button onclick="alterNumero('+')" class="button-sorteador">+</button>
+                    </div>                 
+                    <div>
+                        <a onclick="sortear()" class="card-link">Sortear</a>
+                    </div>
+                </section>                
+            </div>    
+            
+            <div id="sala" class="w-100 h-100 d-flex-row justify-between items"> 
+                  <div id="lado-direito"></div>
+                  <div id="lado-esquerdo"></div>
+            </div>  
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+
+    <script>
+
+        let listaNomes = [];
+        let lugares = 34;
+
+        function alterNumero(input){
+            const numero = document.getElementById("numero-sorteador")
+
+            if(input == "+"){
+                lugares += 1;
+            }
+            else{
+                lugares -= 1;
+            }
+          
+            numero.innerText = lugares;
+        }
+
+        async function preencherNomes(){
+
+            const { value: text } = await Swal.fire({
+                input: 'textarea',
+                inputLabel: 'Lista de nomes',
+                inputPlaceholder: 'Separado por vírgula',
+                inputAttributes: {
+                  'aria-label': 'Coloque os nomes aqui'
+                },
+                showCancelButton: true
+              })
+              
+              if (text) {
+               listaNomes = String(text).trim().split(',')
+              }
+
+        }
+
+   
+
+        function sortear(){    
+          
+            const ladoDireito = document.getElementById("lado-direito");
+            const ladoEsquerdo = document.getElementById("lado-esquerdo");
+            ladoDireito.innerHTML = ""
+            ladoEsquerdo.innerHTML = ""
+
+            Swal.fire({
+                title: 'Informar nomes ?',
+                showCancelButton: true,
+                confirmButtonText: 'Sim',
+                cancelButtonText: 'Não',
+              }).then(async (result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+                    await preencherNomes()
+                } 
+                espalhar()
+              })  
+
+              function espalhar(){
+                    let listaOrdenada = listaNomes
+                    .map(value => ({ value, sort: Math.random() }))
+                    .sort((a, b) => a.sort - b.sort)
+                    .map(({ value }) => value)                
+                
+                    for(let contar = 0; contar < lugares; contar++){
+                        const lugar = document.createElement("div");
+                        const texto = document.createElement("div");
+                        texto.classList.add("lugar-texto");
+
+                        if(contar < listaOrdenada.length){
+                            texto.innerText = String(listaOrdenada[contar]).trim() 
+                        }
+                   
+
+                        lugar.appendChild(texto)
+                        lugar.style.width = "calc(100% / 5)"
+                        lugar.classList.add("lugar")
+                        lugar.style.backgroundImage = "url(../public/svg/desk.svg)";
+                        lugar.style.backgroundRepeat = "no-repeat";
+                        lugar.style.backgroundPosition = "center";
+                        lugar.style.display = "flex";
+                        lugar.style.justifyContent = "center";
+                        lugar.style.alignItems = "flex-start";
+
+                        if(Math.round(lugares / 2) < contar){
+                            ladoEsquerdo.appendChild(lugar);
+                        }
+                        else{
+                            ladoDireito.appendChild(lugar);
+                        
+                        }
+                    }
+              }
+        }
+
+    </script>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
