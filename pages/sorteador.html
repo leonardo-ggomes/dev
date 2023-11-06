@@ -82,7 +82,7 @@
         </header>
 
         <main>
-            <div class="d-flex-row vh-100 justify-around align-center wrap">
+            <div class="bg-image-1 w-100 d-flex-row vh-100 justify-around align-center wrap">
                 <section>
                     <article class="d-flex-column justify-center p-10">
                         <div class="title">
@@ -183,6 +183,7 @@
                         const lugar = document.createElement("div");
                         const texto = document.createElement("div");
                         texto.classList.add("lugar-texto");
+                        texto.style.transform = "rotate(180deg)";
 
                         if(contar < listaOrdenada.length){
                             texto.innerText = String(listaOrdenada[contar]).trim() 
@@ -195,6 +196,7 @@
                         lugar.style.backgroundImage = "url(../public/svg/desk.svg)";
                         lugar.style.backgroundRepeat = "no-repeat";
                         lugar.style.backgroundPosition = "center";
+                        lugar.style.transform = "rotate(180deg)";
                         lugar.style.display = "flex";
                         lugar.style.justifyContent = "center";
                         lugar.style.alignItems = "flex-start";

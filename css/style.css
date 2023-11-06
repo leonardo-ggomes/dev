@@ -55,10 +55,7 @@ body{
 }
 
 .bg-capa{
-    background-image: url(../public/images/AdobeStock_613022824.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    background-color: #3188a0;
 }
 
 .grif{
@@ -540,6 +537,10 @@ a.card-link{
 .card-header .card-subtitle{
     font-size: 12px;
     font-weight: 300;
+}
+
+.subtitle{
+    color: #ffffff!important;
 }
 
 .card-header .card-tag{
