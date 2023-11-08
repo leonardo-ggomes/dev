@@ -72,6 +72,14 @@ body{
     border-radius: 2px;
 }
 
+.bg-footer{
+    background-color: #50acc5;
+}
+
+.bg-copyright{
+    background-color: #127894;
+}
+
 main{
     margin-top: -46px;
 }
@@ -101,6 +109,10 @@ main{
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+footer ul{
+    list-style: none;
 }
 
 .nav-links li{
@@ -209,6 +221,7 @@ a.link-none{
 .text-code{
    color: #43ff00;
 }
+
 
 .mt-10{
     margin-top: 10px;
@@ -342,6 +355,10 @@ a.link-none{
 
 .justify-around{
     justify-content: space-around;
+}
+
+.justify-evenly{
+    justify-content: space-evenly;
 }
 
 .align-center{
@@ -516,6 +533,10 @@ a.card-link{
     width: 50px;
 }
 
+.cursor{
+    cursor: pointer;
+}
+
 .card-header{
     display: flex;
     justify-content: space-between;
@@ -581,4 +602,5 @@ a.card-link{
 .card-section{
     margin-left: 90px;
 }
+
 
