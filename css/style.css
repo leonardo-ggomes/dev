@@ -50,6 +50,13 @@ body{
     background-attachment: fixed;
 }
 
+.bg-image-3{
+    background-image: url(../public/images/futurisc-city.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 .bg-blue{
     background-color:rgb(0 174 255) !important ;
 }
