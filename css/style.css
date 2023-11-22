@@ -257,9 +257,9 @@ a.link-none{
 .a-custom-top{
     text-decoration: none;
     padding: 5px;
-    background-color: #f3876d;
+    border:1px solid #f3876d;
     border-radius: 3px;
-    color: white;
+    color: #f3876d;
 }
 
 .grid-item{
