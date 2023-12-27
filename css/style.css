@@ -470,6 +470,11 @@ a.link-none{
     font-size: 14px;
 }
 
+.card-lock{
+    font-size: 52px;
+    color: gray;
+}
+
 /** Medias Queries*/
 @media screen and (max-width: 650px) {
     .nav-links{

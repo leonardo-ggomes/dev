@@ -12,8 +12,14 @@
 
 
     <style>
+
+        #sala{
+            padding: 50px;
+            background-color: white;
+        }
+
         #sala div{
-            width: calc(100% / 2);
+            width: calc(100%); 
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -28,9 +34,13 @@
         }
 
         .lugar-texto{         
-            color: white;
-            text-align: center;
+            border-radius: 15px;
+            margin-top: -36px;
+            color: #ffffff;
+            background-color: black;
             font-size: 13px;
+            display: flex;
+            justify-content: center;
         }
 
         .button-sorteador{
@@ -73,7 +83,7 @@
                  </ul>
             </div>
             <div>
-                <a href="trilhas.html" class="link-none">
+                <a href="trilhas.html" class="a-custom-top">
                     <i class="fa-solid fa-chalkboard-user"></i> Trilhas
                 </a>               
             </div>
@@ -205,10 +215,13 @@
 
         function sortear(){    
           
+            const sala = document.getElementById("sala");
             const ladoDireito = document.getElementById("lado-direito");
             const ladoEsquerdo = document.getElementById("lado-esquerdo");
             ladoDireito.innerHTML = ""
             ladoEsquerdo.innerHTML = ""
+          
+            sala.style.backgroundColor ="#127894" //"#00aeff" //#50acc5
 
             Swal.fire({
                 title: 'Informar nomes ?',
@@ -233,7 +246,7 @@
                         const lugar = document.createElement("div");
                         const texto = document.createElement("div");
                         texto.classList.add("lugar-texto");
-                        texto.style.transform = "rotate(180deg)";
+                        // texto.style.transform = "rotate(180deg)";
 
                         if(contar < listaOrdenada.length){
                             texto.innerText = String(listaOrdenada[contar]).trim() 
@@ -243,15 +256,15 @@
                         lugar.appendChild(texto)
                         lugar.style.width = "calc(100% / 5)"
                         lugar.classList.add("lugar")
-                        lugar.style.backgroundImage = "url(../public/svg/desk.svg)";
+                        lugar.style.backgroundImage = "url(../public/svg/desk-svgrepo-book.svg)";
                         lugar.style.backgroundRepeat = "no-repeat";
                         lugar.style.backgroundPosition = "center";
-                        lugar.style.transform = "rotate(180deg)";
+                        // lugar.style.transform = "rotate(180deg)";
                         lugar.style.display = "flex";
                         lugar.style.justifyContent = "center";
                         lugar.style.alignItems = "flex-start";
 
-                        if(Math.round(lugares / 2) < contar){
+                        if(Math.round(lugares / 2) < contar + 1){
                             ladoEsquerdo.appendChild(lugar);
                         }
                         else{
