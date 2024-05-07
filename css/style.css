@@ -57,6 +57,13 @@ body{
     background-attachment: fixed;
 }
 
+.bg-image-4{
+    background-image: url(../public/images/fazenda_laranja.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 .bg-blue{
     background-color:rgb(0 174 255) !important ;
 }
